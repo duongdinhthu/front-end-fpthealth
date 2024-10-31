@@ -1,0 +1,66 @@
+/*.container {*/
+/*    padding: 20px;*/
+/*    font-family: Arial, sans-serif;*/
+/*}*/
+
+/*.search-fields {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+/*    gap: 10px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.search-fields input {*/
+/*    padding: 10px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*.patient-info, .appointments, .medical-records {*/
+/*    margin-bottom: 20px;*/
+/*    border: 1px solid #ddd;*/
+/*    padding: 10px;*/
+/*    border-radius: 5px;*/
+/*    background-color: #f9f9f9;*/
+/*}*/
+
+/*.grid-container {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+/*    gap: 20px;*/
+/*}*/
+
+/*.grid-item {*/
+/*    border: 1px solid #ddd;*/
+/*    padding: 10px;*/
+/*    border-radius: 5px;*/
+/*    background-color: #fff;*/
+/*}*/
+
+/*!*h1, h2 {*!*/
+/*!*    text-align: center;*!*/
+/*!*}*!*/
+
+/*input, button {*/
+/*    !*display: block;*!*/
+/*    margin: 10px auto;*/
+/*    padding: 10px;*/
+/*    width: 80%;*/
+/*}*/
+
+/*!*input {*!*/
+/*!*    border: 1px solid #ccc;*!*/
+/*!*    border-radius: 5px;*!*/
+/*!*}*!*/
+
+/*!*button {*!*/
+/*!*    background-color: #28a745;*!*/
+/*!*    !*color: white;*!*!*/
+/*!*    border: none;*!*/
+/*!*    border-radius: 5px;*!*/
+/*!*    cursor: pointer;*!*/
+/*!*}*!*/
+
+/*button:hover {*/
+/*    background-color: #218838;*/
+/*}*/

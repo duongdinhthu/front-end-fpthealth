@@ -1,0 +1,86 @@
+
+.MedicalRecords {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-item p{
+    margin: 4px 0;
+    color: #000000;
+    font-size: 15px;
+}
+.grid-item strong{
+    color: #0044a5;
+}
+
+.grid-item h3{
+    margin: 0 0 10px 0;
+    color: #004b91;
+    font-size: 18px;
+}
+
+.grid-item button{
+    color: #ffffff;
+    background-color: #004b91;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.grid-item button:hover{
+    background-color: #ffffff;
+    color: #004b91;
+    box-shadow: 0 0 3px #004b91;
+    transition: all 0.3s ease-in-out;
+}
+
+/* MedicalRecordsList.css */
+.modal {
+    position: fixed; /* Sử dụng fixed để modal nằm trên toàn bộ trang */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Đưa modal vào giữa màn hình */
+    width: 80%;
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Đảm bảo modal nằm trên các phần tử khác */
+    display: block; /* Đảm bảo modal hiển thị */
+}
+
+.overlay {
+    position: fixed; /* Đảm bảo overlay phủ toàn bộ màn hình */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Nền tối để modal nổi bật hơn */
+    z-index: 999; /* Đảm bảo overlay nằm dưới modal */
+}

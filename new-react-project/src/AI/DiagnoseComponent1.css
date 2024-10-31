@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f7fa;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.AI-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.AI-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Image Upload Box */
+.img-upload {
+    background-color: #eef2f5;
+    border: 2px dashed #ccc;
+    padding: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.img-upload:hover {
+    background-color: #e1ecf4;
+}
+
+.upload-image {
+    max-width: 100%;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.upload-box p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.upload-box img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.clearImage, .submit-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clearImage {
+    background-color: #f44336;
+    color: white;
+}
+
+.clearImage:hover {
+    background-color: #d32f2f;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Prediction Section */
+.prediction-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+}
+
+.prediction {
+    font-family: 'Courier New', monospace;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    max-height: 150px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Thêm thanh cuộn nếu nội dung dài */
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .AI-content, .prediction-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .img-upload {
+        padding: 30px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .clearImage, .submit-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

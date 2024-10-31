@@ -1,0 +1,151 @@
+
+/*========*/
+.container-dt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    min-height: 95vh;
+    margin: 0;
+    background-image: url("../img/home-bg-2.jpg");
+    background-size: cover;background-repeat: no-repeat;
+    height: 100%;
+    padding: 20px; /* Thêm khoảng cách để không bị dính vào lề */
+}
+
+.wrapper {
+    width: 100%;
+    /*margin-top: 29rem;*/
+}
+
+.text-dt {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 2rem;
+    width: 80%;
+    height: auto;
+    margin-top: -3rem;;
+}
+
+.text-dt h3 {
+    font-size: 2rem;
+    color: #004bb5;;
+}
+
+.text-dt p {
+    font-size: 1rem;
+    max-width: 500px;
+    color: #282c34;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.text-dt span {
+    color: #004bb5;
+    font-size: 2rem;
+    /*margin-top: -20px;*/
+}
+
+
+.carousel .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 15px; /* Điều chỉnh khoảng cách giữa các card */
+}
+
+.carousel .card img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.carousel .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+.carousel .card img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.wrapper .slick-slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.slick-slide {
+    /*margin: 0 15px; !* Cách xa nhau 30px (15px mỗi bên) *!*/
+    transform: scale(0.7); /* Thu nhỏ card xuống 90% kích thước gốc */
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng thu phóng */
+}
+
+.slick-slide:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.panner-2 {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 51px;
+    padding: 0 13rem 13rem ;
+}
+
+.panner-img2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panner-img2 img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    .wrapper{
+        display: none;
+    }
+    .panner-2{
+        display: grid;
+    }
+    .text-dt p{
+        font-size: 1.4rem !important;
+    }
+    .text-dt h3{
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .text-dt p{
+        font-size: 3.4rem !important;
+        width: 297px;
+        margin-bottom: 18rem;
+    }
+    .text-dt h3{
+        font-size: 5rem;
+    }
+    .panner-2{
+        gap: 17px;
+    }
+}

@@ -1,0 +1,148 @@
+
+.container-rcmt {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.section {
+    padding: 40px 0;
+    /*margin-top: 102px;*/
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #024389;
+    margin-bottom: 20px;
+    position: relative;
+}
+.career-section-2{
+    background: url("https://yteco.vn/data/sites/1/skins/default/img/bg-career-1.jpg");
+    /*margin-top: 2%;*/
+    height: 100vh;
+}
+
+
+.content-wrap {
+    padding-right: 20px;
+    margin-top: 40px;
+}
+
+.content-wrap.content {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.items-center {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+}
+
+.col-lg-5, .col-lg-6, .col-lg-7 {
+    padding: 10px;
+}
+.col-lg-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+
+.col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-lg-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+}
+
+.offset-lg-1 {
+    margin-left: 8.33333%;
+}
+
+
+@media (max-width: 768px) {
+    .col-lg-5, .col-lg-6, .col-lg-7, .offset-lg-1 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .content-wrap {
+        padding-right: 0;
+    }
+
+    .section-title {
+        text-align: center;
+        /*padding-top: 30px;*/
+        font-size: 3rem;
+    }
+    .content-wrap .content{
+        font-size: 2rem;
+    }
+
+    .items-center{
+        display: block;
+    }
+    .section {
+        padding: 0 20px;
+    }
+}
+.img {
+    padding: 10px;
+}
+
+.img figure {
+    margin: 0;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #004b91;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #004b91;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.label {
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+}

@@ -1,0 +1,149 @@
+.AI-container {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    background-color: white;
+    width: 400px;
+    max-width: 400px;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.start-AI {
+    position: fixed;
+    bottom: 120px;
+    right: 0;
+    background-color: white;
+    padding: 3px 10px 0 15px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 0 0 20px;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+.start-AI:hover {
+    transition: all 0.3s ease-in-out;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.close-ai {
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px red;
+}
+
+.AI-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AI-header h4{
+    font-size: 20px;
+    color: #004b91;
+}
+
+.AI-content {
+    margin-top: 20px;
+}
+
+.square-box {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    margin: 10px 0;
+}
+
+#upload-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+.square-box img {
+    display: block;
+}
+
+#img-input{
+    display: none;
+}
+
+.button-group{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.button-group button{
+    background-color: #004b91;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px #004b91;
+}
+
+.button-group button:hover{
+    background-color: white;
+    color: #004b91;
+}
+
+.button-group .clearImage{
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px red;
+}
+
+.button-group .clearImage:hover,.close-ai:hover{
+    background-color: white;
+    color: red;
+}
+.imgDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgDiv h4{
+    font-size: 20px;
+    color: #a6a3a3;
+    position: absolute;
+}
+
+.prediction{
+    width: 100%;
+    border: 2px dashed #ccc;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    color: #004b91;
+    padding: 5px 0;
+}

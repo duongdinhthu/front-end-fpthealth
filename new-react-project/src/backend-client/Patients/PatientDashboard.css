@@ -1,0 +1,570 @@
+
+.dashboard-container {
+    margin-top: 12vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f8f9fa;
+    min-height: 88vh;
+    background-image: url("https://charminghome.com.vn/wp-content/uploads/2018/06/Tang3_View1.jpg");
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.patient-info, .edit-patient-form, .appointments-list, .medical-records-list {
+    width: 40%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    height: 450px;
+}
+
+.patient-info h2, .edit-patient-form h2 {
+    color: #004b91;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.appointments-list h2, .medical-records-list h2{
+    color: #004b91;
+    font-size: 24px;
+}
+
+.toggle-buttons button {
+    background-color: #004b91;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-buttons button:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 3px #004b91;
+    color: #004b91;
+}
+
+.toggle-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.appointments-list, .medical-records-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appointment-item, .medical-record-item {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #004b91;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.loading-message {
+    font-size: 1.2em;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#patientImg {
+    background-color: #6c757d;
+    height: 200px;
+    width: 150px;
+}
+
+.patient-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.edit-patient-form{
+    width: 60%;
+    height: 80%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.patient-info-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.patient-info-left button, .changePass{
+    width: 150px;
+    background-color: #004b91;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.patient-info-left button:hover, .changePass:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #004b91;
+    box-shadow: 0 0 3px #004b91;
+}
+
+.patient-info-right{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    margin-left: 15%;
+    gap: 20px;
+}
+
+.patient-info-right p strong{
+    color: #004b91;
+}
+.patient-info-right p{
+    margin: 4px 0;
+    color: #000000;
+    font-size: 15px;
+}
+
+.show-pass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.patient-password{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    padding: 10%;
+}
+
+.edit-form .form-group{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.edit-form .form-group input{
+    width: 100%;
+    height: 30px;
+    padding: 10px 0;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    box-shadow: 0 -1px 0 0 #a6a3a3 inset;
+    transition: all 0.2s ease-in-out;
+}
+
+.edit-form .form-group label{
+    position: absolute;
+    width: fit-content;
+    color: #a6a3a3;
+    font-size: 15px;
+    pointer-events: none;
+    height: fit-content;
+    transition: all 0.3s ease-in-out;
+    left: 0;
+}
+
+.edit-form .form-group input:focus ~ label
+{
+    font-size: 15px;
+    color: #004b91;
+    margin-bottom: 50px;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+}
+
+.edit-form .form-group input[type="date"] ~ label
+{
+    font-size: 15px;
+    margin-bottom: 50px;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+}
+
+.edit-form .form-group .has-value ~ label{
+    font-size: 15px;
+    color: #a6a3a3;
+    margin-bottom: 50px;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+}
+
+.patient_gender input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 46px;
+    height: 26px;
+    background: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    outline: none;
+}
+
+.patient_gender input[type="checkbox"]:checked {
+    background: #004b91;
+}
+
+.patient_gender input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+}
+
+.patient_gender input[type="checkbox"]:checked:before {
+    left: 23px;
+}
+
+.patient_gender{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.patient_gender div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.patient_gender label{
+    font-size: 15px;
+}
+.btn-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.btn-group .save-button{
+    width: 100px;
+    background-color: #004b91;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.btn-group .cancel-button{
+    width: 100px;
+    background-color: #b90000;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.btn-group .save-button:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #004b91;
+    box-shadow: 0 0 3px #004b91;
+}
+
+.btn-group .cancel-button:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #b90000;
+    box-shadow: 0 0 3px #b90000;
+}
+
+.changePassContainer.open{
+    display: flex;
+}
+
+.changePassContainer{
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 999;
+}
+
+.changePassOverlay{
+    background: rgba(0,0,0,0.4);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.changePassForm{
+    position: fixed;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 500px;
+    height: 400px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+}
+
+.changePassForm form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    gap: 30px;
+}
+
+.changePassForm form .input-list{
+    gap: 20px;
+}
+
+.changePassForm form div button{
+    width: 100%;
+    background-color: #004b91;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: white;
+}
+.changePassForm form div button:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #004b91;
+    box-shadow: 0 0 3px #004b91;
+}
+
+
+.changePassForm form .input-list div:last-child{
+    width: 100%;
+}
+
+.changePassForm form .input-list .input-div input:hover, .changePassForm form .input-list .input-div input:focus{
+    outline: none;
+    box-shadow: 0 -2px 0 0 #004b91 inset;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.changePassForm form h3{
+    width: 100%;
+    text-align: center;
+    color: #004bb5;
+    font-size: 20px;
+}
+
+.close-change-pass{
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    border-radius: 100%;
+    right: -60px;
+    z-index: 1;
+    top: 0;
+    padding: 8px;
+    background-color: white ;
+    width: 24px;
+    height: 24px;
+}
+
+.close-change-pass:hover{
+    scale: 1.1;
+    rotate: 90deg;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.changePassForm .input-div:nth-child(3){
+    margin-bottom: 10px;
+}
+
+.changePassAlert{
+    position: absolute;
+    line-height: normal;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    color: red;
+    top: 40px;
+    left: 0;
+}
+
+.appointments-list-header, .medical-records-list-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1040px) {
+    .patient-info, .appointments-list, .medical-records-list{
+        width: 70%;
+    }
+    .appointments-popup{
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .appointments-list-header, .medical-records-list-header {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .appointments-popup{
+        width: 90%;
+    }
+}
+
+@media (max-width: 670px) {
+    .patient-info, .appointments-list, .medical-records-list{
+        width: 95%;
+    }
+    .appointments-container, .grid-container{
+        max-height: 300px;
+    }
+    .close-change-pass{
+        right: 0;
+        background-color: transparent;
+    }
+
+}
+
+@media (max-width: 510px) {
+    #patientImg {
+        height: 150px;
+        width: 100px;
+    }
+
+    .patient-info-left button{
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .patient-info h2{
+        font-size: 18px;
+
+    }
+    .patient-info-right p, .appointment-card p, .grid-item p {
+        font-size: 13px;
+    }
+
+    .patient-info-right{
+        gap: 10px;
+    }
+
+    .appointment-card h3, .grid-item h3{
+        font-size: 16px;
+    }
+
+    .status-icon{
+        width: 10px;
+        height: 10px;
+    }
+
+    .toggle-buttons button{
+        padding: 10px;
+    }
+
+    .patient_gender{
+        gap: 5px;
+        justify-content: flex-start;
+    }
+
+    .patient_gender input[type="checkbox"]{
+        width: 40px;
+        height: 20px;
+    }
+
+    .patient_gender input[type="checkbox"]:before {
+        width: 14px;
+        height: 14px;
+    }
+
+    .changePassForm {
+        width: 100%;
+    }
+
+    .changePassForm .input-list{
+        width: 80%;
+    }
+
+    .changePassForm form h3{
+        font-size: 18px;
+    }
+}
